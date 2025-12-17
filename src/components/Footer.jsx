@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+// import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,13 +8,13 @@ const Footer = () => {
         <h2 className="text-2xl font-bold mb-2">Shopsy</h2>
         <p className="text-sm mb-4">support@shopsy.com</p>
 
-        {/* Social Icons */}
+        {/* Social Icons
         <div className="flex justify-center gap-4 mb-4">
           <FaFacebookF className="hover:text-gray-400 transition cursor-pointer" />
           <FaInstagram className="hover:text-gray-400 transition cursor-pointer" />
           <FaYoutube className="hover:text-gray-400 transition cursor-pointer" />
           <FaTiktok className="hover:text-gray-400 transition cursor-pointer" />
-        </div>
+        </div> */}
 
         {/* Navigation Links */}
         <div className="flex justify-center gap-6 text-sm mb-4">
