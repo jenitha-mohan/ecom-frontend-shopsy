@@ -12,7 +12,7 @@ const Cart = ({ CartProduct, setCartProduct, setOrders }) => {
 
   const fetchCart = async () => {
     try {
-      const res = await fetch("http://localhost:3000/carts", {
+      const res = await fetch("https://ecom-backend-shopsy.onrender.com/carts", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -47,7 +47,7 @@ const Cart = ({ CartProduct, setCartProduct, setOrders }) => {
     const cartItem = CartProduct[index];
 
     try {
-      const res = await fetch("http://localhost:3000/carts", {
+      const res = await fetch("https://ecom-backend-shopsy.onrender.com/carts", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const Cart = ({ CartProduct, setCartProduct, setOrders }) => {
   const handleRemove = async (productId, index) => {
     try {
       const res = await fetch(
-        `http://localhost:3000/carts/${productId}`,
+        `https://ecom-backend-shopsy.onrender.com/carts/${productId}`,
         {
           method: "DELETE",
           headers: {
@@ -108,7 +108,7 @@ const handleCheckout = async () => {
   };
 
   try {
-    const res = await fetch("http://localhost:3000/orders", {
+    const res = await fetch("https://ecom-backend-shopsy.onrender.com/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

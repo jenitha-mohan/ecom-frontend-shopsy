@@ -7,7 +7,7 @@ const Orders = ({ orders, setOrders }) => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:3000/orders", {
+        const res = await fetch("https://ecom-backend-shopsy.onrender.com/orders", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

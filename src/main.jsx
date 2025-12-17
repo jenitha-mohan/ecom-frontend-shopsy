@@ -27,7 +27,7 @@ const Main = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/products");
+        const res = await axios.get("https://ecom-backend-shopsy.onrender.com/products");
         setProducts(res.data);
       } catch (err) {
         console.error("Failed to fetch products:", err);
@@ -42,7 +42,7 @@ useEffect(() => {
   const fetchCart = async () => {
     if (!token) return;
     try {
-      const res = await axios.get("http://localhost:3000/carts", {
+      const res = await axios.get("https://ecom-backend-shopsy.onrender.com/carts", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartProduct(res.data.cart?.products || []);
@@ -61,7 +61,7 @@ const addToCart = async (product) => {
 
   try {
     const { data } = await axios.post(
-      "http://localhost:3000/carts",
+      "https://ecom-backend-shopsy.onrender.com/carts",
       {
         productId: product._id,
         quantity: 1
@@ -85,7 +85,7 @@ const addToCart = async (product) => {
   const removeFromCart = async (id) => {
     if (!token) return;
     try {
-      await axios.delete(`http://localhost:3000/carts/${id}`, {
+      await axios.delete(`https://ecom-backend-shopsy.onrender.com/carts/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartProduct((prev) => prev.filter((item) => item.id !== id));
@@ -102,7 +102,7 @@ const addToCart = async (product) => {
     const fetchOrders = async () => {
       if (!token) return;
       try {
-        const res = await axios.get("http://localhost:3000/orders", {
+        const res = await axios.get("https://ecom-backend-shopsy.onrender.com/orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrders(res.data.orders);

@@ -25,7 +25,7 @@ const LoginForm = () => {
 
   try {
     const response = await axios.post(
-      "http://localhost:3000/auth/login", // 🔥 backend
+      "https://ecom-backend-shopsy.onrender.com/auth/login", // 🔥 backend
       {
         email: username,   // backend expects email
         password: password

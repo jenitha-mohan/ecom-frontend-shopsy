@@ -17,7 +17,7 @@ const ProductForm = ({ products, setProducts }) => {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/products", {
+      const res = await axios.post("https://ecom-backend-shopsy.onrender.com/products", {
         name: productName,
         price: parseFloat(productPrice),
         image: productImage || "",
